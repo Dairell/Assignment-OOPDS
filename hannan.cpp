@@ -1,13 +1,9 @@
 // =============================================================================
 // CCP6124 Object-Oriented Programming and Data Structures
 // Virtual Machine and Assembly Language Interpreter
-// File: TT01_G01.cpp
+// File: TT07L_G07.cpp
 // Description: Single-file implementation of a simplified virtual machine
 //              with an assembly language runner/interpreter.
-// =============================================================================
-// IMPORTANT: Replace TT01_G01 with your actual tutorial section and group ID.
-// All STL containers (vector, stack, queue, list, etc.) are NOT used.
-// Custom implementations of List, Stack, and Queue are provided below.
 // =============================================================================
 
 #include <iostream>
@@ -22,7 +18,7 @@ using namespace std;
 
 // =============================================================================
 // SECTION 1: CUSTOM DATA STRUCTURES
-// Written by: [Your Name]
+// Written by: [Emil Shadiq, 252UC241Q3]
 // =============================================================================
 
 // -----------------------------------------------------------------------------
@@ -192,7 +188,7 @@ public:
 
 // =============================================================================
 // SECTION 2: REGISTER CLASSES
-// Written by: [Your Name]
+// Written by: [Dairell Hannan, 252UC24246]
 // =============================================================================
 
 // -----------------------------------------------------------------------------
@@ -291,7 +287,7 @@ public:
 
 // =============================================================================
 // SECTION 3: MEMORY CLASS
-// Written by: [Your Name]
+// Written by: [Arfa Mirza, 252UC2425R]
 // Description: Manages 64 bytes of signed memory (addresses 0–63).
 //              Composed inside the CPU class.
 // =============================================================================
@@ -326,7 +322,7 @@ public:
 
 // =============================================================================
 // SECTION 4: INSTRUCTION CLASS HIERARCHY
-// Written by: [Your Name]
+// Written by: [Arfa Mirza, 252UC2425R]
 // Description: Abstract base class 'Instruction' with virtual execute().
 //              Derived classes implement specific behaviours (polymorphism).
 // =============================================================================
@@ -361,7 +357,7 @@ public:
 
 // =============================================================================
 // SECTION 5: CPU CLASS
-// Written by: [Your Name]
+// Written by: [Muhammad Irfan Zikry, 252UC242RA]
 // Description: Central class that owns Memory (composition), aggregates
 //              FlagRegister, GeneralRegisters, PC, SI, and the Stack.
 //              All instruction execute() methods operate through CPU's public API.
@@ -513,7 +509,7 @@ public:
 
 // =============================================================================
 // SECTION 6: CONCRETE INSTRUCTION CLASSES
-// Written by: [Your Name]
+// Written by: [Emil Shadiq, 252UC241Q3, Dairell Hannan, 252UC24246]
 // Each class is a derived Instruction implementing a specific opcode.
 // Polymorphism: the Runner stores Instruction* pointers and calls execute().
 // =============================================================================
@@ -983,7 +979,7 @@ public:
 
 // =============================================================================
 // SECTION 7: RUNNER (INTERPRETER)
-// Written by: [Your Name]
+// Written by: [Muhammad Irfan Zikry, 252UC242RA]
 // Description: Reads a .asm file, parses each line into Instruction objects,
 //              stores them in a MyList<Instruction*>, and executes them via CPU.
 // =============================================================================
@@ -1215,12 +1211,12 @@ public:
 
 // =============================================================================
 // SECTION 8: MAIN
-// Written by: [Your Name]
-// Usage: ./TT01_G01 <program.asm> [output.txt]
-//   If no arguments given, defaults to "program.asm" and "output.txt"
+// Written by: [Arfa Mirza, 252UC2425R]
+// Usage: ./TT07L_G07 <sample.asm> [output.txt]
+//   If no arguments given, defaults to "sample.asm" and "output.txt"
 // =============================================================================
 int main(int argc, char* argv[]) {
-    string inputFile  = "program.asm";
+    string inputFile  = "sample.asm";
     string outputFile = "output.txt";
 
     if (argc >= 2) inputFile  = argv[1];
