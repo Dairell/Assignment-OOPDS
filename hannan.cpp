@@ -1,9 +1,16 @@
 // =============================================================================
 // CCP6124 Object-Oriented Programming and Data Structures
 // Virtual Machine and Assembly Language Interpreter
+// Tutorial: TT7L
+// Group: 07
 // File: TT07L_G07.cpp
 // Description: Single-file implementation of a simplified virtual machine
 //              with an assembly language runner/interpreter.
+// Members:
+//   - Emil Shadiq (252UC241Q3) — Custom data structures, CONCRETE INSTRUCTION CLASSES(Arithmetic, Shift, Load, Store, Push, Pop)
+//   - Dairell Hannan (252UC24246) — Register classes, CONCRETE INSTRUCTION CLASSES(Input, Display, Mov, IncDec, Rotate, Reset)
+//   - Arfa Mirza (252UC2425R) — Memory class, Instruction class hierarchy, Main
+//   - Muhammad Irfan Zikry (252UC242RA) — CPU class, Runner class
 // =============================================================================
 
 #include <iostream>
@@ -1218,6 +1225,7 @@ public:
 int main(int argc, char* argv[]) {
     string inputFile  = "sample.asm";
     string outputFile = "output.txt";
+    
 
     if (argc >= 2) inputFile  = argv[1];
     if (argc >= 3) outputFile = argv[2];
