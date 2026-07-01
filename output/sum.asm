@@ -1,0 +1,9 @@
+; Sum of 2 numbers
+MOV R0, 0
+INPUT R1
+ADD R0, R1
+INPUT R1
+ADD R0, R1
+DISPLAY R0
+STORE 0, R0
+
