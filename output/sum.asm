@@ -1,4 +1,4 @@
-; Sum of 2 numbers
+
 MOV R0, 0
 INPUT R1
 ADD R0, R1
