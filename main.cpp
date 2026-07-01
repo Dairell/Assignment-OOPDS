@@ -1225,11 +1225,12 @@ public:
 int main(int argc, char* argv[]) {
     string inputFile  = "sample.asm";
     string outputFile = "output.txt";
-    
+
 
     if (argc >= 2) inputFile  = argv[1];
     if (argc >= 3) outputFile = argv[2];
 
+    cout << "====================================" << endl;
     cout << "=== Virtual Machine Interpreter ===" << endl;
     cout << "Loading: " << inputFile << endl;
     cout << "Output : " << outputFile << endl;
