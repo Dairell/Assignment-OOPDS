@@ -1223,21 +1223,39 @@ public:
 //   If no arguments given, defaults to "sample.asm" and "output.txt"
 // =============================================================================
 int main(int argc, char* argv[]) {
-    string inputFile  = "sample.asm";
-    string outputFile = "output.txt";
+    cout << "========================================" << endl;
+    cout << "   Virtual Machine Interpreter v1.0     " << endl;
+    cout << "   CCP6124 - Group TT7L_G07             " << endl;
+    cout << "========================================" << endl;
 
+    string choice = "y";
 
-    if (argc >= 2) inputFile  = argv[1];
-    if (argc >= 3) outputFile = argv[2];
+    while (choice == "y" || choice == "Y") {
 
-    cout << "====================================" << endl;
-    cout << "=== Virtual Machine Interpreter ===" << endl;
-    cout << "Loading: " << inputFile << endl;
-    cout << "Output : " << outputFile << endl;
-    cout << "====================================" << endl;
+        string inputFile = "";
+        cout << "\nEnter .asm file name: ";
+        cin >> inputFile;
 
-    Runner runner;
-    runner.runFile(inputFile, outputFile);
+        // Change the output file name based on the input file name
+        // example: sample.asm -> sample_output.txt
+        string base = inputFile;
+        size_t dotPos = base.rfind('.');
+        if (dotPos != string::npos)
+            base = base.substr(0, dotPos);
+        string outputFile = base + "_output.txt";
 
+        cout << "Output  : " << outputFile << " (auto)" << endl;
+        cout << "----------------------------------------" << endl;
+
+        // Run
+        Runner runner;
+        runner.runFile(inputFile, outputFile);
+
+        // Tanya nak run lagi tak
+        cout << "\nIs there another file to run? (y/n): ";
+        cin >> choice;
+    }
+
+    cout << "\nProgram . Bye!" << endl;
     return 0;
 }
