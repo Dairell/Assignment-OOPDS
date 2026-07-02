@@ -1184,6 +1184,9 @@ public:
             int pc = cpu.getPC();
             instructions[pc]->execute(cpu);
             cpu.incrementPC();
+            if (cpu.getPC() < total) {
+                cpu.dump(cout);
+            }
         }
     }
 
